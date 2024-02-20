@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         Team
                     </a>
                     <a class="logo-img git-img" href="https://github.com/MaxNoddings" target="_blank">
+                        Educational Resources
+                    </a>
+                    <a class="logo-img git-img" href="https://github.com/MaxNoddings" target="_blank">
                         Get Involved
                     </a>
                 </nav>
