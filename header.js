@@ -9,17 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="header-content">
                 <!-- Top Left Corner Logo -->
                 <img class="header-logo" src="/public/SMCSIF.png" alt="logo-img"/>
-
-                <span id="nav-label" hidden>Navigation</span>
-
-                <button class="open-menu" aria-expanded="false">
-                    <img src="/public/hamburger.svg" alt="" width="28" height="28">
-                </button>
             
-                <nav class="topnav_menu" role="dialog" aria-labelledby="nav-label">
-                    <button class="close-menu">
-                        <img src="/public/close-x.svg" alt="" width="28" height="28">
-                    </button>
+                <nav>
                     <!-- Nav section for Links (that will be in the top right corner) (give these links cool logos in the future) -->
                     <a class="logo-img" href="https://www.linkedin.com/in/max-noddings/" target="_blank">
                         About

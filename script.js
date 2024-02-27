@@ -1,12 +1,32 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const body = document.body;
+let lastScroll = 0;
 
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-})
+window.addEventListener("scroll", () => {
+	const currentScroll = window.pageYOffset;
+	if (currentScroll <= 0) {
+		body.classList.remove("scroll-up");
+		return;
+	}
 
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}))
+	if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+		body.classList.remove("scroll-up");
+		body.classList.add("scroll-down");
+	} else if (
+		currentScroll < lastScroll &&
+		body.classList.contains("scroll-down")
+	) {
+		body.classList.remove("scroll-down");
+		body.classList.add("scroll-up");
+	}
+	lastScroll = currentScroll;
+});
+
+function showSidebar() {
+	const sidebar = document.querySelector(".sidebar");
+	sidebar.style.display = "flex";
+};
+
+function hideSidebar() {
+	const sidebar = document.querySelector(".sidebar");
+	sidebar.style.display = "none";
+};
