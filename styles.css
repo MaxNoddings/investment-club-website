@@ -219,22 +219,40 @@ body {
 .button-div {
     background-color: white;
     width: 100%;
-    height: 400px;
+    height: 200px;
     display: flex;
     align-items: center; 
     justify-content: center;
 }
 
-.button-div div {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    width: fit-content;
-    color: purple;
-    background-color: rgb(211, 211, 211);
+.button-div>div {
+    padding: 10px 20px 10px 20px;
+    border-radius: 100px;
+    border: 2px solid rgb(182, 2, 182);
+    display: flex;
+}
+
+.button-div>div:hover {
+    opacity: 0.3;
 }
 
 .button-div a {
-    
+    text-decoration: none;
+    color: rgb(182, 2, 182);
+    font-family: "Rufina", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.arrow {
+    padding-top: 4px;
+    padding-left: 30px;
+    color: rgb(182, 2, 182);
+}
+
+.arrow i {
+    font-size: 50px;
 }
 
 .aesthetic-image2 {
@@ -243,4 +261,22 @@ body {
     background-image: url("/public/flowers.jpeg");
     background-size: cover;
     background-position: center bottom;
+}
+
+footer {
+    color: purple;
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+footer div {
+    text-align: center;
+}
+
+footer div p:nth-child(2) {
+    color: rgb(187, 113, 197);
 }
