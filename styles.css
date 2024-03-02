@@ -280,3 +280,9 @@ footer div {
 footer div p:nth-child(2) {
     color: rgb(187, 113, 197);
 }
+
+/* About */
+
+.sector-focus, .asset-allocation, .benefit ul {
+    padding-left: 30px;
+}
