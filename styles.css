@@ -281,8 +281,8 @@ footer div p:nth-child(2) {
     color: rgb(187, 113, 197);
 }
 
-/* About */
+/* About, Team */
 
-.sector-focus, .asset-allocation, .benefit, .sustainability, .internship ul {
+.sector-focus, .asset-allocation, .benefit, .sustainability, .internship, .team ul {
     padding-left: 30px;
 }
