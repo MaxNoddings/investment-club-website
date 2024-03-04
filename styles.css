@@ -283,6 +283,6 @@ footer div p:nth-child(2) {
 
 /* About, Team */
 
-.sector-focus, .asset-allocation, .benefit, .sustainability, .internship, .team ul {
+.sector-focus, .asset-allocation, .benefit, .sustainability, .internship, .team, .opportunities, .resources ul {
     padding-left: 30px;
 }
