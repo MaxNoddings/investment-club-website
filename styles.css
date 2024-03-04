@@ -283,6 +283,6 @@ footer div p:nth-child(2) {
 
 /* About */
 
-.sector-focus, .asset-allocation, .benefit ul {
+.sector-focus, .asset-allocation, .benefit, .sustainability, .internship ul {
     padding-left: 30px;
 }
