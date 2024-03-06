@@ -485,7 +485,7 @@ footer div p:nth-child(2) {
 .header-text-team {
     color: white;
     font-size: 60px;
-    padding-top: 30px;
+    padding-top: 130px;
     padding-bottom: 30px;
 }
 
@@ -503,7 +503,7 @@ footer div p:nth-child(2) {
     display: flex;
     gap: 30px;
     align-items: flex-start;
-    padding: 10px;
+    padding: 20px;
     border-radius: 20px;
 }
 
@@ -527,6 +527,31 @@ footer div p:nth-child(2) {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.outreach {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    width: fit-content;
+    margin-right: auto;
+    text-decoration: none;
+    margin-top: -10px;
+}
+
+.outreach:hover {
+    opacity: 0.3;
+}
+
+.logo-img {
+    max-width: 100px;
+    margin-top: -10px;
+}
+
+.logo-img:hover {
+    opacity: 0.3;
 }
 
 .bio {
