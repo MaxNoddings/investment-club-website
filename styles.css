@@ -451,6 +451,27 @@ footer div p:nth-child(2) {
 
 /* Team */
 
+.background-image-team {
+    background-image: url("../public/lib-winter.avif");
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-text-team {
+    margin-top: 90px;
+    color: white;
+    font-family: "Rufina", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 65px;
+    text-align: center;
+}
+
 .team {
     background-color: #712f88;
     width: 100%;
@@ -459,6 +480,13 @@ footer div p:nth-child(2) {
 .team>div {
     width: 80vw;
     margin: 0 auto;
+}
+
+.header-text-team {
+    color: white;
+    font-size: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .team-grid {
