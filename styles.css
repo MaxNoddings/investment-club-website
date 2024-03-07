@@ -143,10 +143,10 @@ body {
     padding-left: 10vw;
     padding-right: 10vw;
     color: white;
-    font-family: "Rufina", serif;
+    /* font-family: "Rufina", serif; */
     font-weight: 400;
     font-style: normal;
-    font-size: 65px;
+    font-size: 75px;
     text-align: center;
 }
 
@@ -261,24 +261,6 @@ body {
     background-image: url("/public/flowers.jpeg");
     background-size: cover;
     background-position: center bottom;
-}
-
-footer {
-    color: purple;
-    background-color: white;
-    width: 100%;
-    height: 200px;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-}
-
-footer div {
-    text-align: center;
-}
-
-footer div p:nth-child(2) {
-    color: rgb(187, 113, 197);
 }
 
 /* Multiple Pages */
@@ -498,6 +480,7 @@ footer div p:nth-child(2) {
 }
 
 .team-grid>div {
+    max-width: 750px;
     background-color: rgba(128, 128, 128, 0.597);
     color: white;
     display: flex;
@@ -505,6 +488,7 @@ footer div p:nth-child(2) {
     align-items: flex-start;
     padding: 20px;
     border-radius: 20px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .imgContainer {
@@ -558,4 +542,79 @@ footer div p:nth-child(2) {
     height: 100%;
     display: flex;
     align-items: center;
+    font-size: 17px;
+}
+
+@media (width <= 1176px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (width <= 640px) {
+    .team>div {
+        width: 90vw;
+        max-width: 90vw;
+    }
+    
+    .team-grid>div {
+        flex-direction: column;
+        width: 90vw;
+        max-width: 90vw;
+    }
+
+    .header-text-team {
+        font-size: 40px;
+    }
+
+    .imgContainer {
+        max-height: 150px;
+        max-width: 150px;
+        height: 150px;
+        width: 150px;
+    }
+
+    .left-bio {
+        /* Font size and width */
+        /* width: 100px; */
+    }
+}
+
+@media (width <= 425px) {
+    .header-text-team {
+        font-size: 30px;
+    }
+
+    .team-grid>div ul {
+        font-size: 12px;
+    }
+}
+
+/* Footer */
+
+footer {
+    color: purple;
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+footer div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .plug {
+    color: rgb(187, 113, 197);
+    text-decoration: none;
+}
+
+footer .plug:hover {
+    color: rgb(133, 0, 151);
+    font-weight: 500;
 }
