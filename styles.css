@@ -573,11 +573,6 @@ body {
         height: 150px;
         width: 150px;
     }
-
-    .left-bio {
-        /* Font size and width */
-        /* width: 100px; */
-    }
 }
 
 @media (width <= 425px) {
@@ -588,6 +583,44 @@ body {
     .team-grid>div ul {
         font-size: 12px;
     }
+}
+
+/* Educational Resources */
+
+.resources {
+    background-color: white;
+    width: 100%;
+}
+
+.resources div {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 80vw;
+    margin: 0 auto;
+    color: #712f88;
+}
+
+.resources div h1 {
+    padding-bottom: 20px;
+    font-size: 50px;
+}
+
+.resources div ul {
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+.resources li {
+    margin-bottom: 30px;
+}
+
+.logo-img-ed {
+    width: 300px;
+    height: auto;
+}
+
+.logo-img-ed:hover {
+    opacity: 0.6;
 }
 
 /* Footer */
