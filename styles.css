@@ -594,15 +594,9 @@ body {
 
 .resources div {
     padding-top: 60px;
-    padding-bottom: 60px;
     width: 80vw;
     margin: 0 auto;
     color: #712f88;
-}
-
-.resources div h1 {
-    padding-bottom: 20px;
-    font-size: 50px;
 }
 
 .resources div ul {
@@ -615,8 +609,9 @@ body {
 }
 
 .logo-img-ed {
-    width: 300px;
-    height: auto;
+    width: auto;
+    height: 70px;
+    margin-bottom: 20px;
 }
 
 .logo-img-ed:hover {
