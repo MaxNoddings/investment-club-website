@@ -16,7 +16,9 @@ body {
     min-height: 100vh;
 }
 
-body
+header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 main, header {
     max-width: 100%;
@@ -94,14 +96,6 @@ nav li:first-child {
     gap: 45px;
 }
 
-/* .sidebar li {
-    width: 100%;
-}
-
-.sidebar a {
-    width: 100%;
-} */
-
 .menu-button {
     display: none;
 }
@@ -133,18 +127,11 @@ nav li:first-child {
     justify-content: center;
 }
 
-body {
-    padding-bottom: 10000%;
-	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="36" height="72" viewBox="0 0 36 72"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-}
-
 .title-text {
     margin-top: -50vh;
     padding-left: 10vw;
     padding-right: 10vw;
     color: white;
-    /* font-family: "Rufina", serif; */
-    font-weight: 400;
     font-style: normal;
     font-size: 75px;
     text-align: center;
@@ -164,7 +151,6 @@ body {
 }
 
 .mission div h1 {
-    font-family: "Rufina", serif;
     padding-bottom: 20px;
     font-size: 4vw;
 }
@@ -203,7 +189,6 @@ body {
 }
 
 .philosophy h1 {
-    font-family: "Rufina", serif;
     padding-bottom: 20px;
     font-size: 4vw;
 }
@@ -214,6 +199,10 @@ body {
     border-radius: 30px;
     background-color: rgb(210, 126, 251);
     padding: 20px;
+}
+
+.info-card p {
+    text-align: start;
 }
 
 .button-div {
@@ -239,8 +228,6 @@ body {
 .button-div a {
     text-decoration: none;
     color: rgb(182, 2, 182);
-    font-family: "Rufina", serif;
-    font-weight: 400;
     font-style: normal;
     font-size: 50px;
 }
@@ -260,7 +247,7 @@ body {
     height: 600px;
     background-image: url("/public/flowers.jpeg");
     background-size: cover;
-    background-position: center bottom;
+    background-position: center center;
 }
 
 /* Multiple Pages */
@@ -270,38 +257,38 @@ body {
 }
 
 /* About */
+
 .background-image-about {
-    background-image: url("../public/SMCBeauty.jpeg");
-    height: 300px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: white;
+    padding-top: 70px;
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
 }
 
+.background-image-about>div {
+    width: 80vw;
+}
+
 .title-text-about {
-    margin-top: 90px;
-    color: white;
-    font-family: "Rufina", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 65px;
-    text-align: center;
+    padding-top: 60px;
+    color: #712f88;
+    font-size: 75px;
+    /* text-align: center; */
 }
 
 .who-we-are {
-    background-color: #712f88;
+    background-color: white;
     width: 100%;
 }
 
 .who-we-are div {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
     width: 80vw;
     margin: 0 auto;
-    color: white;
+    color: #712f88;
 }
 
 .who-we-are div p {
@@ -314,7 +301,7 @@ body {
 }
 
 .sector-focus div {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 60px;
     width: 80vw;
     margin: 0 auto;
@@ -340,20 +327,18 @@ body {
 }
 
 .asset-allocation {
-    background-color: #712f88;
+    background-color: white;
     width: 100%;
 }
 
 .asset-allocation div {
-    padding-top: 60px;
-    padding-bottom: 60px;
     width: 80vw;
     margin: 0 auto;
-    color: white;
+    color: #712f88;
 }
 
 .asset-allocation div h1 {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     font-size: 55px;
 }
 
@@ -362,19 +347,22 @@ body {
     padding-left: 30px;
 }
 
+.asset-allocation h2 {
+    margin-bottom: 20px;
+}
+
 .asset-allocation li {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .asset-allocation div div {
     display: flex;
-    background-color: rgba(182, 251, 182, 0.232);
 }
 
 .asset-allocation div div div {
     display: flex;
     flex-direction: column;
-    background-color: rgba(182, 251, 182, 0.232);
+    margin-bottom: 30px;
 }
 
 .benefit {
@@ -382,7 +370,7 @@ body {
     width: 100%;
 }
 
-.benefit div {
+.benefit>div {
     padding-top: 60px;
     padding-bottom: 60px;
     width: 80vw;
@@ -391,8 +379,12 @@ body {
 }
 
 .benefit div h1 {
-    padding-bottom: 20px;
     font-size: 55px;
+}
+
+.benefit h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .benefit div ul {
@@ -405,30 +397,47 @@ body {
 }
 
 .sustainability {
-    background-color: #712f88;
+    background-color: white;
     width: 100%;
 }
 
-.sustainability div {
-    padding-top: 60px;
+.sustainability p {
+    text-align: start;
+}
+
+.sustainability>div {
     padding-bottom: 60px;
     width: 80vw;
     margin: 0 auto;
-    color: white;
+    color: #712f88;
+    font-size: 20px;
 }
 
-.sustainability div h1 {
-    padding-bottom: 20px;
+.sustainability>div>div {
+    margin-top: 40px;
+}
+
+.sustainability>div>h1 {
+    margin-bottom: 40px;
     font-size: 55px;
 }
 
-.sustainability div ul {
+.sustainability>div>div>h1 {
+    font-size: 40px;
+}
+
+.sustainability>div>div>div {
+    margin-top: 35px;
+}
+
+.sustainability ul {
     font-size: 20px;
     padding-left: 30px;
+    margin-top: 20px;
 }
 
 .sustainability li {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /* Team */
@@ -446,7 +455,7 @@ body {
 
 .title-text-team {
     margin-top: 90px;
-    color: white;
+    color: #712f88;
     font-family: "Rufina", serif;
     font-weight: 400;
     font-style: normal;
@@ -455,7 +464,7 @@ body {
 }
 
 .team {
-    background-color: #712f88;
+    background-color: white;
     width: 100%;
 }
 
@@ -465,10 +474,10 @@ body {
 }
 
 .header-text-team {
-    color: white;
-    font-size: 60px;
+    color: #712f88;
+    font-size: 75px;
     padding-top: 130px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .team-grid {
@@ -476,12 +485,13 @@ body {
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
     row-gap: 30px;
+    padding-top: 30px;
     padding-bottom: 60px;
 }
 
 .team-grid>div {
     max-width: 750px;
-    background-color: rgba(128, 128, 128, 0.597);
+    background-color: rgba(120, 69, 136, 0.597);
     color: white;
     display: flex;
     gap: 30px;
@@ -514,7 +524,7 @@ body {
 }
 
 .outreach {
-    color: white;
+    color: #712f88;
     display: flex;
     align-items: center;
     gap: 14px;
@@ -592,8 +602,16 @@ body {
     width: 100%;
 }
 
-.resources div {
+.header-text-resources {
+    color: #712f88;
+    font-size: 75px;
+    padding-top: 75px;
+    padding-bottom: 30px;
+}
+
+.resources>div {
     padding-top: 60px;
+    padding-bottom: 60px;
     width: 80vw;
     margin: 0 auto;
     color: #712f88;
@@ -608,14 +626,81 @@ body {
     margin-bottom: 30px;
 }
 
-.logo-img-ed {
+.logo-img-ed-bloomberg {
     width: auto;
     height: 70px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
-.logo-img-ed:hover {
+.logo-img-ed-coursera {
+    width: auto;
+    height: 60px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.logo-img-ed-wsj {
+    width: auto;
+    height: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.logo-img-ed-barrons {
+    width: auto;
+    height: 70px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.logo-img-ed-market {
+    width: auto;
+    height: 70px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.logo-img-ed-bloomberg:hover, .logo-img-ed-coursera:hover, .logo-img-ed-wsj:hover, .logo-img-ed-barrons:hover, .logo-img-ed-market:hover{
     opacity: 0.6;
+}
+
+/* Get Involved */
+
+.get-involved {
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+}
+
+.get-involved>div {
+    padding-top: 200px;
+    padding-bottom: 60px;
+    width: 80vw;
+    margin: 0 auto;
+    color: #712f88;
+}
+
+.get-involved h1, p {
+    text-align: center;
+}
+
+.get-involved h1 {
+    font-size: 60px;
+}
+
+.get-involved p {
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+.get-involved a {
+    text-decoration: underline;
+    color: rgb(240, 124, 255);
+}
+
+.get-involved a:hover {
+    opacity: 0.5;
 }
 
 /* Footer */
@@ -628,6 +713,7 @@ footer {
     display: flex;
     align-items: center; 
     justify-content: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer div {
@@ -644,5 +730,4 @@ footer .plug {
 
 footer .plug:hover {
     color: rgb(133, 0, 151);
-    font-weight: 500;
 }
