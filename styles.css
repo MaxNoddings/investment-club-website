@@ -283,6 +283,10 @@ nav li:first-child {
     width: 100%;
 }
 
+.who-we-are p {
+    text-align: left;
+}
+
 .who-we-are div {
     padding-top: 30px;
     padding-bottom: 20px;
