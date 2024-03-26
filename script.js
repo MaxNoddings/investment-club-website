@@ -30,3 +30,13 @@ function hideSidebar() {
 	const sidebar = document.querySelector(".sidebar");
 	sidebar.style.display = "none";
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+	var readMoreBtn = document.getElementById("readMoreButton");
+	var scrollTarget = document.getElementById("scrollTarget");
+
+	readMoreBtn.addEventListener("click", function() {
+		scrollTarget.scrollIntoView({ behavior: "smooth" }); // scroll to the target element
+	});
+});
+  
