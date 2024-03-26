@@ -315,7 +315,7 @@ nav li:first-child {
 
 @media(width <= 600px) {
     .title-text {
-        font-size: 40px;
+        font-size: 30px;
         padding-left: 1vw;
         padding-right: 1vw;
     }
@@ -325,7 +325,7 @@ nav li:first-child {
     }
     
     .background-image {
-        height: 120vh;
+        height: 80vh;
     }
 
     .background-image>div {
@@ -333,7 +333,7 @@ nav li:first-child {
     }
 
     #readMoreButton {
-        margin-top: 280px;
+        margin-top: 300px;
     }
 
     .mission div ul {
