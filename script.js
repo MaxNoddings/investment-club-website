@@ -33,7 +33,7 @@ function hideSidebar() {
 
 document.addEventListener("DOMContentLoaded", function() {
 	var readMoreBtn = document.getElementById("readMoreButton");
-	var scrollTarget = document.getElementById("scrollTarget");
+	var scrollTarget = document.getElementById("target");
 
 	readMoreBtn.addEventListener("click", function() {
 		scrollTarget.scrollIntoView({ behavior: "smooth" }); // scroll to the target element
