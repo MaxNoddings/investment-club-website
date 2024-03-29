@@ -24,18 +24,6 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// function showSidebar() {
-//     const sidebar = document.querySelector(".sidebar");
-//     sidebar.style.display = "flex";
-//     sidebarDisplayed = true;
-//     // Disable scroll event listener
-//     sidebar.style.overflowY = "hidden";
-// 	// Store the current scroll position
-//     const scrollPosition = window.pageYOffset;
-// 	// Restore the scroll position
-//     window.scrollTo(0, scrollPosition);
-// };
-
 function showSidebar(event) {
     event.preventDefault(); // Prevent default anchor tag behavior
     const sidebar = document.querySelector(".sidebar");
