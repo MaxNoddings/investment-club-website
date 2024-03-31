@@ -557,6 +557,99 @@ nav li:first-child {
     margin-bottom: 20px;
 }
 
+@media(width <= 600px) {
+    .sector-focus, .asset-allocation, .benefit, .sustainability {
+        padding-left: 0px;
+    }
+
+    .title-text-about {
+        padding-top: 30px;
+        font-size: 45px;
+    }
+
+    .sector-focus div {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .sector-focus li {
+        margin-bottom: 15px; 
+    }
+    
+    .sector-focus div h1 {
+        font-size: 30px;
+    }
+
+    .sector-focus div ul {
+        font-size: 18px;
+        padding-left: 15px;
+    }
+
+    .asset-allocation div h1 {
+        font-size: 30px;
+    }
+    
+    .asset-allocation div ul {
+        font-size: 18px;
+    }
+
+    .asset-allocation div div {
+        flex-direction: column;
+    }
+
+    .asset-allocation h2 {
+        margin-bottom: 10px;
+    }
+
+    .asset-allocation div div div {
+        margin-bottom: 15px;
+    }
+
+    .asset-allocation div ul {
+        padding-left: 15px;
+    }
+
+    .benefit h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .benefit>div {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .benefit div h1 {
+        font-size: 30px;
+    }
+
+    .benefit div ul {
+        font-size: 18px;
+        padding-left: 15px;
+    }
+
+    .benefit li {
+        margin-bottom: 15px;
+    }
+
+    .sustainability>div {
+        font-size: 18px;
+    }
+
+    .sustainability>div>h1 {
+        font-size: 30px;
+    }
+
+    .sustainability>div>div>h1 {
+        font-size: 28px;
+    }
+
+    .sustainability ul {
+        font-size: 18px;
+        padding-left: 15px;
+    }
+}
+
 /* Team */
 
 .background-image-team {
@@ -847,4 +940,10 @@ footer .plug {
 
 footer .plug:hover {
     color: rgb(133, 0, 151);
+}
+
+@media (width <= 600px) {
+    footer {
+        height: 150px;
+    }
 }
