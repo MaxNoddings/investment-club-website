@@ -365,7 +365,7 @@ nav li:first-child {
 
 /* Multiple Pages */
 
-.sector-focus, .asset-allocation, .benefit, .sustainability, .internship, .team, .opportunities, .resources ul {
+.sector-focus, .asset-allocation, .benefit, .sustainability, .internship, .opportunities, .resources ul {
     padding-left: 30px;
 }
 
@@ -563,8 +563,8 @@ nav li:first-child {
     }
 
     .title-text-about {
-        padding-top: 30px;
-        font-size: 45px;
+        padding-top: 20px;
+        font-size: 50px;
     }
 
     .sector-focus div {
@@ -784,7 +784,8 @@ nav li:first-child {
     }
 
     .header-text-team {
-        font-size: 40px;
+        font-size: 50px;
+        padding-top: 80px;
     }
 
     .imgContainer {
@@ -796,12 +797,8 @@ nav li:first-child {
 }
 
 @media (width <= 425px) {
-    .header-text-team {
-        font-size: 30px;
-    }
-
     .team-grid>div ul {
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 
@@ -873,6 +870,48 @@ nav li:first-child {
 
 .logo-img-ed-bloomberg:hover, .logo-img-ed-coursera:hover, .logo-img-ed-wsj:hover, .logo-img-ed-barrons:hover, .logo-img-ed-market:hover{
     opacity: 0.6;
+}
+
+@media (width <= 600px) {
+    .header-text-resources {
+        font-size: 50px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .resources div ul {
+        font-size: 20px;
+        padding-left: 0px;
+    }
+    
+    .resources li {
+        margin-bottom: 15px;
+    }
+
+    .logo-img-ed-bloomberg {
+        width: auto;
+        height: 50px;
+    }
+    
+    .logo-img-ed-coursera {
+        width: auto;
+        height: 39px;
+    }
+    
+    .logo-img-ed-wsj {
+        width: auto;
+        height: 23px;
+    }
+    
+    .logo-img-ed-barrons {
+        width: auto;
+        height: 55px;
+    }
+    
+    .logo-img-ed-market {
+        width: auto;
+        height: 40px;
+    }
 }
 
 /* Get Involved */
