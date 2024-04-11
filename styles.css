@@ -211,6 +211,9 @@ nav li:first-child {
     border-radius: 30px;
     background-color: rgb(210, 126, 251);
     padding: 20px;
+}
+
+.philosophy {
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -221,6 +224,15 @@ nav li:first-child {
 .info-card li {
     font-size: 20px;
     margin-bottom: 20px;
+}
+
+.info-card {
+    box-shadow: 10px 10px 0 0 #cda875;
+}
+
+.info-card:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 20px 20px 0 0 #cda875;
 }
 
 .button-div {
@@ -708,7 +720,12 @@ nav li:first-child {
     align-items: flex-start;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.team-grid>div:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 20px 20px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .imgContainer {
