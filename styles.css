@@ -991,6 +991,7 @@ footer div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5px;
 }
 
 footer .plug {
@@ -1000,6 +1001,11 @@ footer .plug {
 
 footer .plug:hover {
     color: rgb(133, 0, 151);
+}
+
+footer .footer-logo {
+    height: 70px;
+    padding-bottom: 10px;
 }
 
 @media (width <= 600px) {
