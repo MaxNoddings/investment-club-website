@@ -1005,6 +1005,7 @@ footer .plug:hover {
 
 footer .footer-logo {
     height: 70px;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 
