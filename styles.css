@@ -938,6 +938,52 @@ nav li:first-child {
 
 /* Get Involved */
 
+.background-image-involved {
+    background-color: white;
+    padding-top: 70px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-image-involved>div {
+    width: 80vw;
+}
+
+.title-text-involved {
+    padding-top: 60px;
+    color: #712f88;
+    font-size: 75px;
+}
+
+.involved-info {
+    background-color: white;
+    width: 100%;
+}
+
+.involved-info p {
+    text-align: left;
+}
+
+.involved-info>div {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    width: 80vw;
+    margin: 0 auto;
+    color: #712f88;
+    display: flex;
+    justify-content: space-between;
+}
+
+.involved-info div p {
+    font-size: 30px;
+}
+
+.involved-img {
+    width: 600px;
+}
+
 .get-involved {
     background-color: white;
     width: 100%;
