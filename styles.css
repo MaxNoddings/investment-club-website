@@ -1020,6 +1020,34 @@ nav li:first-child {
     opacity: 0.5;
 }
 
+@media (width <= 1340px) {
+    .involved-info>div {
+        flex-direction: column;
+    }
+
+    .involved-img {
+        margin-top: 50px;
+    }
+}
+
+@media (width <= 776px) {
+    .involved-img {
+        width: 300px;
+    }
+
+    .title-text-involved {
+        margin-top: 20px;
+        font-size: 50px;
+    }
+}
+
+@media (width <= 600px) {
+    .title-text-involved {
+        margin-top: -40px;
+        font-size: 50px;
+    }
+}
+
 /* Footer */
 
 footer {
