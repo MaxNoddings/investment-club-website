@@ -50,4 +50,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		scrollTarget.scrollIntoView({ behavior: "smooth" }); // scroll to the target element
 	});
 });
+
+window.addEventListener('scroll', function() {
+    var element = document.querySelector('.fade-in');
+    var position = element.getBoundingClientRect().top;
+    var windowHeight = window.innerHeight;
+  
+    // If the top of the element is within the viewport
+    if (position < windowHeight) {
+      element.style.opacity = 1;
+    }
+  });
+  
   
