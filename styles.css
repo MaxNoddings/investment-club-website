@@ -749,6 +749,13 @@ nav li:first-child {
     object-fit: cover;
 }
 
+/* Shift only specific profile images down inside the circular frame.
+   Increase the second value (e.g. 60%) to move the image further down,
+   decrease it (e.g. 40%) to move it up. */
+.imgContainer img.adjust-vertical {
+    object-position: center 23%;
+}
+
 .left-bio {
     width: 250px;
     display: flex;
