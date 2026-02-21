@@ -836,6 +836,20 @@ nav li:first-child {
     }
 }
 
+/* Alumni Page */
+
+.alumni-intro {
+    color: #712f88;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.team-grid>div .bio p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
 /* Educational Resources */
 
 .resources {
