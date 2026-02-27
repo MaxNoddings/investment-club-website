@@ -15,43 +15,43 @@ const alumniData = [
         name: "Margrethe Frøland",
         photo: "/public/maggie.png",
         linkedinUrl: "https://www.linkedin.com/in/margrethe-froland/",
-        title: "TODO: Add Margrethe's current title",
-        bio: "TODO: Add a short bio for Margrethe."
+        title: "Project Associate at Investor Leadership Network",
+        bio: "An alumna of Saint Michael's College, Margrethe served as Co-President and Head of Energy and Infrastructure for the Student Investment Fund during her time there."
     },
     {
         name: "Nikolai Riiber",
         photo: "/public/ribs.png",
         linkedinUrl: "https://www.linkedin.com/in/nikolai-riiber-632a11195/",
-        title: "TODO: Add Nikolai's current title",
-        bio: "TODO: Add a short bio for Nikolai."
+        title: "Associate at Investinor",
+        bio: "Nikolai focuses on series A and growth-stage investments in the software and deeptech sectors. He holds a double major in Data Science and Finance from Saint Michael's College."
     },
     {
         name: "Simen Strand",
         photo: "/public/simen.png",
         linkedinUrl: "https://www.linkedin.com/in/simen-strand/",
-        title: "TODO: Add Simen's current title",
-        bio: "TODO: Add a short bio for Simen."
+        title: "Business Analyst at Arthur D. Little",
+        bio: "Simen specializes in technology and strategy consulting in Oslo. He is a graduate of Saint Michael's College and has additional academic experience from the University of Utah's David Eccles School of Business."
     },
     {
         name: "Niko Selvaag",
         photo: "/public/niko.png",
         linkedinUrl: "https://www.linkedin.com/in/nikolas-selvaag-6b1729200/",
-        title: "TODO: Add Niko's current title",
-        bio: "TODO: Add a short bio for Niko."
+        title: "Procurement Buyer at Aker Solutions",
+        bio: "A graduate of Saint Michael's College, Nikolas has a strong background in professional career readiness and finance, currently contributing to procurement operations within the energy industry."
     },
     {
         name: "Sam Boger",
         photo: "/public/sam.png",
         linkedinUrl: "https://www.linkedin.com/in/samuelboger/",
-        title: "TODO: Add Sam's current title",
-        bio: "TODO: Add a short bio for Sam."
+        title: "Cost Analyst at GlobalFoundries",
+        bio: "A Co-Founder of the Saint Michael's College Student Investment Fund, Sam was instrumental in establishing the fund's foundation and remains an active supporter of the alumni network."
     },
     {
         name: "Hannah Bennett",
         photo: "/public/hannah.jpg",
         linkedinUrl: "https://www.linkedin.com/in/hannah04bennett/",
-        title: "TODO: Add Hannah's current title",
-        bio: "TODO: Add a short bio for Hannah."
+        title: "Co-Vice Chair of the Student Investment Fund",
+        bio: "A member of the Class of 2026 at Saint Michael's College, Hannah is heavily involved in the college's finance and leadership programs, managing strategic initiatives for the fund."
     }
 ];
 
