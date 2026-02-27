@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Create a header element
     var header = document.createElement("header");
-    
+
     // Set the HTML content of the header (you can load it from an external file if needed)
     header.innerHTML = `
         <!-- Header Section -->
@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         </li>
                         <li><a href="/about/index.html">About</a></li>
                         <li><a href="#">Team</a></li>
+                        <li><a href="/alumni/index.html">Alumni</a></li>
                         <li><a href="#">Educational Resources</a></li>
                         <li><a href="#">Get Involved</a></li>
                     </ul>
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <li><a href="index.html"><img id="header-logo" src="/public/SMCSIF.png" alt="logo-img"/></a></li>
                         <li class="hideOnMobile"><a href="/about/index.html">About</a></li>
                         <li class="hideOnMobile"><a href="#">Team</a></li>
+                        <li class="hideOnMobile"><a href="/alumni/index.html">Alumni</a></li>
                         <li class="hideOnMobile"><a href="#">Educational Resources</a></li>
                         <li class="hideOnMobile"><a href="#">Get Involved</a></li>
                         <li class="menu-button" onclick=showSidebar()><a href="#"><svg width="30" height="30" viewBox="0 0 720 560" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </header>
     `;
-    
+
     // Insert the header at the beginning of the body
     document.body.insertBefore(header, document.body.firstChild);
 });
