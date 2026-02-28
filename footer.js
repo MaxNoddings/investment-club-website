@@ -3,7 +3,7 @@ const footerContent = `
   <footer>
     <div>
     <img class="footer-logo" src="/public/favicon.png" alt="logo-img"/>  
-    <p> Copyright <i class="fa-regular fa-copyright"></i> 2024 Saint Michael's College Student Investment Fund<br><br></p>
+    <p> Copyright <i class="fa-regular fa-copyright"></i> 2026 Saint Michael's College Student Investment Fund<br><br></p>
       <div>
         <a class="plug" href="https://maxnoddings.netlify.app/" target="_blank">
           <p> Website by Max Noddings </p>
