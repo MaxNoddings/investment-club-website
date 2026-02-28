@@ -20,28 +20,28 @@ const alumniData = [
     },
     {
         name: "Nikolai Riiber",
-        photo: "/public/ribs.png",
+        photo: "/public/ribs.jpeg",
         linkedinUrl: "https://www.linkedin.com/in/nikolai-riiber-632a11195/",
         title: "Associate at Investinor",
         bio: "Nikolai focuses on series A and growth-stage investments in the software and deeptech sectors. He holds a double major in Data Science and Finance from Saint Michael's College."
     },
     {
         name: "Simen Strand",
-        photo: "/public/simen.png",
+        photo: "/public/simen.jpeg",
         linkedinUrl: "https://www.linkedin.com/in/simen-strand/",
         title: "Business Analyst at Arthur D. Little",
         bio: "Simen specializes in technology and strategy consulting in Oslo. He is a graduate of Saint Michael's College and has additional academic experience from the University of Utah's David Eccles School of Business."
     },
     {
         name: "Niko Selvaag",
-        photo: "/public/niko.png",
+        photo: "/public/niko.jpeg",
         linkedinUrl: "https://www.linkedin.com/in/nikolas-selvaag-6b1729200/",
         title: "Procurement Buyer at Aker Solutions",
         bio: "A graduate of Saint Michael's College, Nikolas has a strong background in professional career readiness and finance, currently contributing to procurement operations within the energy industry."
     },
     {
         name: "Sam Boger",
-        photo: "/public/sam.png",
+        photo: "/public/sam.jpeg",
         linkedinUrl: "https://www.linkedin.com/in/samuelboger/",
         title: "Cost Analyst at GlobalFoundries",
         bio: "A Co-Founder of the Saint Michael's College Student Investment Fund, Sam was instrumental in establishing the fund's foundation and remains an active supporter of the alumni network."
