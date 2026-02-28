@@ -852,6 +852,10 @@ nav li:first-child {
     object-position: center 23%;
 }
 
+.imgContainer img.adjust-vertical-extreme {
+    object-position: center 30%;
+}
+
 .left-bio {
     width: 100%;
     display: flex;

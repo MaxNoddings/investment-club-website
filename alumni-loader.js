@@ -49,6 +49,7 @@ const alumniData = [
     {
         name: "Hannah Bennett",
         photo: "/public/hannah.jpg",
+        imageClass: "adjust-vertical-extreme",
         linkedinUrl: "https://www.linkedin.com/in/hannah04bennett/",
         title: "Co-Vice Chair of the Student Investment Fund",
         bio: "A member of the Class of 2026 at Saint Michael's College, Hannah is heavily involved in the college's finance and leadership programs, managing strategic initiatives for the fund."
@@ -57,11 +58,12 @@ const alumniData = [
 
 // Build a single alumni card's HTML
 function createAlumniCard(alumnus) {
+    const imgClass = alumnus.imageClass ? `class="${alumnus.imageClass}"` : '';
     return `
         <div>
             <div class="left-bio">
                 <div class="imgContainer">
-                    <img src="${alumnus.photo}" alt="${alumnus.name}-profile" onerror="this.src='/public/SMCSIF.png'"/>
+                    <img ${imgClass} src="${alumnus.photo}" alt="${alumnus.name}-profile" onerror="this.src='/public/SMCSIF.png'"/>
                 </div>
                 <div>
                     <h1>${alumnus.name}</h1>
