@@ -61,20 +61,22 @@ button,
 }
 
 /* Content is visible by default. Only when JS is active (html.js) do we hide
-   it for the scroll-reveal animation — so a JS hiccup can never blank a section. */
-html.js .animate-on-scroll {
+   it for the scroll-reveal animation — so a JS hiccup can never blank a section.
+   The :where() gate keeps these rules at low specificity so they never override
+   element hover effects (e.g. the card lift). */
+:where(html.js) .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
-html.js .animate-on-scroll.is-visible {
+:where(html.js) .animate-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html.js .animate-on-scroll {
+    :where(html.js) .animate-on-scroll {
         opacity: 1;
         transform: none;
         transition: none;
@@ -334,6 +336,8 @@ nav li:first-child {
     border-radius: 30px;
     background-color: rgb(210, 126, 251);
     padding: 20px;
+    /* Snappy hover lift; opacity still fades in at reveal speed. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.7s ease-out;
 }
 
 .philosophy {
@@ -353,7 +357,7 @@ nav li:first-child {
     box-shadow: 10px 10px 0 0 #cda875;
 }
 
-.info-card:hover {
+.philosophy .info-card:hover {
     transform: translate(-10px, -10px);
     box-shadow: 20px 20px 0 0 #cda875;
 }
@@ -1212,7 +1216,7 @@ nav li:first-child {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gi-card:hover {
+.gi-cards-grid .gi-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 30px rgba(113, 47, 136, 0.15);
 }
