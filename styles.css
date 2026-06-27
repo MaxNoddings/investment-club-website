@@ -17,7 +17,22 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: "IBM Plex Sans", sans-serif;
-    transition-duration: 200ms;
+}
+
+/* Scoped transitions on interactive elements only (avoids the jank of
+   transitioning every property on every element). */
+a,
+button,
+.menu-button,
+.logo-img,
+.button-div>div,
+.info-card,
+.gi-card,
+.gi-cta-button,
+.team-grid>div,
+.hero-social-links a,
+.gi-social a {
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease, box-shadow 0.3s ease;
 }
 
 /* ---- Global Animations ---- */
@@ -45,15 +60,25 @@ html {
     }
 }
 
-.animate-on-scroll {
+/* Content is visible by default. Only when JS is active (html.js) do we hide
+   it for the scroll-reveal animation — so a JS hiccup can never blank a section. */
+html.js .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
-.animate-on-scroll.is-visible {
+html.js .animate-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html.js .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
 
 body {
@@ -130,14 +155,24 @@ nav li:first-child {
     right: 0;
     height: 100vh;
     width: 250px;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.95);
-    display: none;
+    z-index: 10000;
+    background-color: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(6px);
+    box-shadow: -6px 0 24px rgba(0, 0, 0, 0.12);
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding-top: 25px;
     gap: 45px;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.28s ease, visibility 0.28s ease;
+}
+
+.sidebar.is-open {
+    transform: translateX(0);
+    visibility: visible;
 }
 
 .menu-button {
@@ -146,11 +181,12 @@ nav li:first-child {
 
 .background-image {
     background-image: url("/public/lib-winter.avif");
-    height: 120vh;
+    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    display: flex;
 }
 
 /* Dark gradient overlay so white text always pops */
@@ -168,11 +204,13 @@ nav li:first-child {
 .background-image>div {
     position: relative;
     z-index: 2;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 180px;
+    gap: 56px;
+    padding: 140px 20px 60px;
 }
 
 .title-text {
@@ -190,7 +228,7 @@ nav li:first-child {
     font-size: 23px;
     position: relative;
     width: fit-content;
-    margin-top: 320px;
+    margin-top: 0;
     color: white;
     animation: gentlePulse 2.5s ease-in-out infinite;
 }
@@ -260,11 +298,6 @@ nav li:first-child {
 
 .mission li {
     margin-bottom: 30px;
-}
-
-.fade-in {
-    opacity: 0;
-    transition: opacity 1s ease;
 }
 
 .aesthetic-image {
@@ -425,17 +458,17 @@ nav li:first-child {
         height: 40px;
     }
 
-    .background-image {
-        height: 80vh;
-    }
-
     .background-image>div {
-        padding-top: 120px;
+        padding: 110px 16px 48px;
+        gap: 40px;
     }
 
     #readMoreButton {
-        margin-top: 300px;
-        display: none;
+        font-size: 20px;
+    }
+
+    #readMoreButton>button {
+        font-size: 20px;
     }
 
     .mission div ul {

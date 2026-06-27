@@ -13,7 +13,7 @@
 const alumniData = [
     {
         name: "Margrethe Frøland",
-        photo: "/public/maggie.png",
+        photo: "/public/maggie.jpeg",
         linkedinUrl: "https://www.linkedin.com/in/margrethe-froland/",
         title: "Project Associate at Investor Leadership Network",
         bio: "An alumna of Saint Michael's College, Margrethe served as Co-President and Head of Energy and Infrastructure for the Student Investment Fund during her time there."
@@ -63,7 +63,7 @@ function createAlumniCard(alumnus) {
         <div>
             <div class="left-bio">
                 <div class="imgContainer">
-                    <img ${imgClass} src="${alumnus.photo}" alt="${alumnus.name}-profile" onerror="this.src='/public/SMCSIF.png'"/>
+                    <img ${imgClass} src="${alumnus.photo}" alt="${alumnus.name}-profile" loading="lazy" decoding="async" onerror="this.src='/public/SMCSIF.png'"/>
                 </div>
                 <div>
                     <h1>${alumnus.name}</h1>
