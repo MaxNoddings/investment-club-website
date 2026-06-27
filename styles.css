@@ -502,12 +502,6 @@ nav li:first-child {
     }
 }
 
-/* Multiple Pages */
-
-.resources ul {
-    padding-left: 30px;
-}
-
 /* ===== Shared page components (About / Educational Resources) ===== */
 
 /* Clean gradient hero band (top padding clears the fixed header) */
@@ -1007,117 +1001,86 @@ nav li:first-child {
 
 /* Educational Resources */
 
-.resources {
-    background-color: white;
-    width: 100%;
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
-.header-text-resources {
-    color: #712f88;
-    font-size: 75px;
-    padding-top: 75px;
-    padding-bottom: 30px;
+/* Each card is a clickable link to the resource */
+.resource-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
 }
 
-.resources>div {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    width: 80vw;
-    margin: 0 auto;
-    color: #712f88;
+.resource-logo {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
 }
 
-.resources div ul {
-    font-size: 20px;
-    padding-left: 30px;
-}
-
-.resources li {
-    margin-bottom: 30px;
-}
-
-.logo-img-ed-bloomberg {
+.resource-logo img {
+    max-height: 42px;
+    max-width: 175px;
     width: auto;
-    height: 70px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    object-fit: contain;
 }
 
-.logo-img-ed-coursera {
-    width: auto;
-    height: 60px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+.resource-card ul {
+    padding-left: 18px;
+    margin: 0;
 }
 
-.logo-img-ed-wsj {
-    width: auto;
-    height: 50px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+.resource-card li {
+    color: #4a4a4a;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 8px;
 }
 
-.logo-img-ed-barrons {
-    width: auto;
-    height: 70px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+.resource-card li:last-child {
+    margin-bottom: 0;
 }
 
-.logo-img-ed-market {
-    width: auto;
-    height: 70px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+.resource-badge {
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 14px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(205, 168, 117, 0.18);
+    color: #9a7635;
+    font-size: 12px;
+    font-weight: 600;
 }
 
-.logo-img-ed-bloomberg:hover,
-.logo-img-ed-coursera:hover,
-.logo-img-ed-wsj:hover,
-.logo-img-ed-barrons:hover,
-.logo-img-ed-market:hover {
-    opacity: 0.6;
+.resource-visit {
+    margin-top: auto;
+    padding-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--purple);
+    font-weight: 600;
+    font-size: 15px;
+    transition: gap 0.2s ease;
+}
+
+.resource-card:hover .resource-visit {
+    gap: 13px;
+}
+
+@media (width <=900px) {
+    .resource-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (width <=600px) {
-    .header-text-resources {
-        font-size: 50px;
-        padding-top: 30px;
-        padding-bottom: 20px;
-    }
-
-    .resources div ul {
-        font-size: 20px;
-        padding-left: 0px;
-    }
-
-    .resources li {
-        margin-bottom: 15px;
-    }
-
-    .logo-img-ed-bloomberg {
-        width: auto;
-        height: 50px;
-    }
-
-    .logo-img-ed-coursera {
-        width: auto;
-        height: 39px;
-    }
-
-    .logo-img-ed-wsj {
-        width: auto;
-        height: 23px;
-    }
-
-    .logo-img-ed-barrons {
-        width: auto;
-        height: 55px;
-    }
-
-    .logo-img-ed-market {
-        width: auto;
-        height: 40px;
+    .resource-grid {
+        grid-template-columns: 1fr;
     }
 }
 
