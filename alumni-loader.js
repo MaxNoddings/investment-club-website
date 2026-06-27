@@ -11,48 +11,74 @@
  */
 
 const alumniData = [
+    // Class of 2026
+    {
+        name: "Aidan Burns",
+        photo: "/public/aidanburns.jpeg",
+        imageClass: "adjust-vertical",
+        linkedinUrl: "https://www.linkedin.com/in/aidan-burns-b2a893181/",
+        title: "Class of 2026 — Economics",
+        bio: "Aidan graduated from Saint Michael's College in 2026 with a degree in Economics. He served as President and Head of Real Estate for the Student Investment Fund, leading the club through a pivotal year of growth. On campus he was also a videographer for the SMC Lacrosse team and a climbing guide for the SMC Adventure Sports Center."
+    },
+    {
+        name: "Máximo Steverlynck",
+        photo: "/public/maximo.jpg",
+        imageClass: "adjust-vertical",
+        linkedinUrl: "https://www.linkedin.com/in/maximosteverlynck/",
+        title: "Class of 2026 — International Relations & Political Science",
+        bio: "Máximo graduated from Saint Michael's College in 2026 with a double major in International Relations and Political Science. He served as Director of Analysis & Education and Head of Healthcare for the Student Investment Fund. He was also the founder of the SMC Cycling Club and manager of the SMC Nordic Ski Team."
+    },
+    {
+        name: "Julius Van den Broek",
+        photo: "/public/julius.jpeg",
+        linkedinUrl: "https://www.linkedin.com/in/julius-van-den-broek-653a05247/",
+        title: "Class of 2026 — Business",
+        bio: "Julius graduated from Saint Michael's College in 2026 with a major in Business and minors in Accounting, Economics, and Finance. He served as Director of Recruitment and Head of Fixed Income for the Student Investment Fund. He was Captain of the Men's Tennis Team, a finance tutor on campus, and brings internship experience in the hedge fund industry."
+    },
+    // Class of 2025
     {
         name: "Margrethe Frøland",
         photo: "/public/maggie.jpeg",
         linkedinUrl: "https://www.linkedin.com/in/margrethe-froland/",
         title: "Project Associate at Investor Leadership Network",
-        bio: "An alumna of Saint Michael's College, Margrethe served as Co-President and Head of Energy and Infrastructure for the Student Investment Fund during her time there."
-    },
-    {
-        name: "Nikolai Riiber",
-        photo: "/public/ribs.jpeg",
-        linkedinUrl: "https://www.linkedin.com/in/nikolai-riiber-632a11195/",
-        title: "Associate at Investinor",
-        bio: "Nikolai focuses on series A and growth-stage investments in the software and deeptech sectors. He holds a double major in Data Science and Finance from Saint Michael's College."
-    },
-    {
-        name: "Simen Strand",
-        photo: "/public/simen.jpeg",
-        linkedinUrl: "https://www.linkedin.com/in/simen-strand/",
-        title: "Business Analyst at Arthur D. Little",
-        bio: "Simen specializes in technology and strategy consulting in Oslo. He is a graduate of Saint Michael's College and has additional academic experience from the University of Utah's David Eccles School of Business."
-    },
-    {
-        name: "Niko Selvaag",
-        photo: "/public/niko.jpeg",
-        linkedinUrl: "https://www.linkedin.com/in/nikolas-selvaag-6b1729200/",
-        title: "Procurement Buyer at Aker Solutions",
-        bio: "A graduate of Saint Michael's College, Nikolas has a strong background in professional career readiness and finance, currently contributing to procurement operations within the energy industry."
-    },
-    {
-        name: "Sam Boger",
-        photo: "/public/sam.jpeg",
-        linkedinUrl: "https://www.linkedin.com/in/samuelboger/",
-        title: "Cost Analyst at GlobalFoundries",
-        bio: "A Co-Founder of the Saint Michael's College Student Investment Fund, Sam was instrumental in establishing the fund's foundation and remains an active supporter of the alumni network."
+        bio: "Margrethe graduated from Saint Michael's College in 2025. She served as Co-President and Head of Energy and Infrastructure for the Student Investment Fund during her time there, and is now a Project Associate at the Investor Leadership Network."
     },
     {
         name: "Hannah Bennett",
         photo: "/public/hannah.jpg",
         imageClass: "adjust-vertical-extreme",
         linkedinUrl: "https://www.linkedin.com/in/hannah04bennett/",
-        title: "Co-Vice Chair of the Student Investment Fund",
-        bio: "A member of the Class of 2026 at Saint Michael's College, Hannah is heavily involved in the college's finance and leadership programs, managing strategic initiatives for the fund."
+        title: "Class of 2025",
+        bio: "Hannah graduated from Saint Michael's College in 2025. She served as Co-Vice Chair of the Student Investment Fund, playing a key role in the college's finance and leadership programs and managing strategic initiatives for the fund."
+    },
+    {
+        name: "Sam Boger",
+        photo: "/public/sam.jpeg",
+        linkedinUrl: "https://www.linkedin.com/in/samuelboger/",
+        title: "Cost Analyst at GlobalFoundries",
+        bio: "Sam graduated from Saint Michael's College in 2025 and is a Co-Founder of the Student Investment Fund, instrumental in establishing its foundation. He is now a Cost Analyst at GlobalFoundries and remains an active supporter of the alumni network."
+    },
+    // Class of 2024
+    {
+        name: "Nikolai Riiber",
+        photo: "/public/ribs.jpeg",
+        linkedinUrl: "https://www.linkedin.com/in/nikolai-riiber-632a11195/",
+        title: "Associate at Investinor",
+        bio: "Nikolai graduated from Saint Michael's College in 2024 with a double major in Data Science and Finance. He now focuses on series A and growth-stage investments in the software and deeptech sectors as an Associate at Investinor."
+    },
+    {
+        name: "Simen Strand",
+        photo: "/public/simen.jpeg",
+        linkedinUrl: "https://www.linkedin.com/in/simen-strand/",
+        title: "Business Analyst at Arthur D. Little",
+        bio: "Simen graduated from Saint Michael's College in 2024 and has additional academic experience from the University of Utah's David Eccles School of Business. He now specializes in technology and strategy consulting in Oslo as a Business Analyst at Arthur D. Little."
+    },
+    {
+        name: "Niko Selvaag",
+        photo: "/public/niko.jpeg",
+        linkedinUrl: "https://www.linkedin.com/in/nikolas-selvaag-6b1729200/",
+        title: "Procurement Buyer at Aker Solutions",
+        bio: "Niko graduated from Saint Michael's College in 2024 with a strong background in finance and professional career readiness. He is now a Procurement Buyer at Aker Solutions, contributing to procurement operations within the energy industry."
     }
 ];
 
