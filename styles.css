@@ -184,6 +184,7 @@ nav li:first-child {
 .background-image {
     background-image: url("/public/lib-winter.avif");
     min-height: 100vh;
+    min-height: 100svh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -191,15 +192,19 @@ nav li:first-child {
     display: flex;
 }
 
-/* Dark gradient overlay so white text always pops */
+/* Layered overlay: gold glow top-left, purple glow rising from the bottom,
+   and a dark->purple wash so white text always pops. */
 .background-image::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg,
-            rgba(0, 0, 0, 0.25) 0%,
-            rgba(0, 0, 0, 0.10) 40%,
-            rgba(60, 10, 80, 0.40) 100%);
+    background:
+        radial-gradient(circle at 15% 12%, rgba(205, 168, 117, 0.18), transparent 42%),
+        radial-gradient(circle at 50% 118%, rgba(113, 47, 136, 0.55), transparent 60%),
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.34) 0%,
+            rgba(0, 0, 0, 0.12) 42%,
+            rgba(60, 10, 80, 0.58) 100%);
     z-index: 1;
 }
 
@@ -211,8 +216,25 @@ nav li:first-child {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 56px;
+    gap: 44px;
     padding: 140px 20px 60px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.hero-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: clamp(0.75rem, 2.2vw, 1rem);
+    font-weight: 600;
+    color: var(--gold);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .title-text {
@@ -220,10 +242,29 @@ nav li:first-child {
     padding-right: 10vw;
     color: white;
     font-style: normal;
-    font-size: 75px;
+    font-size: clamp(1.875rem, 6.5vw, 75px);
+    line-height: 1.1;
     text-align: center;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
     animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-accent {
+    width: 72px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--gold), #e0c08a);
+    box-shadow: 0 0 14px rgba(205, 168, 117, 0.6);
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-tagline {
+    max-width: 560px;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: clamp(1rem, 2.6vw, 1.35rem);
+    line-height: 1.5;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 2s ease-out;
 }
 
 #readMoreButton {
@@ -275,31 +316,83 @@ nav li:first-child {
 }
 
 .mission {
+    position: relative;
+    overflow: hidden;
     background-color: #712f88;
     width: 100%;
 }
 
-.mission div {
-    padding-top: 50px;
-    padding-bottom: 50px;
+/* Subtle gold glow for depth on the purple sections */
+.mission::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 88% 8%, rgba(205, 168, 117, 0.16), transparent 45%);
+    pointer-events: none;
+}
+
+.mission>div {
+    position: relative;
+    z-index: 1;
+    padding-top: 64px;
+    padding-bottom: 64px;
     width: 80vw;
     margin: 0 auto;
     color: white;
 }
 
 .mission div h1 {
-    padding-bottom: 20px;
-    font-size: 50px;
+    font-size: clamp(2rem, 6vw, 50px);
 }
 
-.mission div ul {
-    font-size: 20px;
-    margin-top: 30px;
-    padding-left: 30px;
+/* Gold accent rule for dark sections */
+.section-accent {
+    display: block;
+    width: 72px;
+    height: 3px;
+    margin-top: 18px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--gold), #e0c08a);
+    box-shadow: 0 0 14px rgba(205, 168, 117, 0.5);
 }
 
-.mission li {
-    margin-bottom: 30px;
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 36px;
+}
+
+.mission-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    padding: 30px 28px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
+.mission-card i {
+    font-size: 30px;
+    color: var(--gold);
+    margin-bottom: 16px;
+}
+
+.mission-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.mission-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .aesthetic-image {
@@ -311,12 +404,24 @@ nav li:first-child {
 }
 
 .philosophy {
+    position: relative;
+    overflow: hidden;
     background-color: #712f88;
     width: 100%;
     display: flex;
 }
 
+.philosophy::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 10% 92%, rgba(205, 168, 117, 0.16), transparent 45%);
+    pointer-events: none;
+}
+
 .philosophy div {
+    position: relative;
+    z-index: 1;
     padding-top: 50px;
     padding-bottom: 50px;
     width: 80vw;
@@ -327,7 +432,12 @@ nav li:first-child {
 }
 
 .philosophy h1 {
-    font-size: 60px;
+    font-size: clamp(2rem, 6vw, 60px);
+}
+
+.philosophy h1 i {
+    margin-right: 12px;
+    color: #712f88;
 }
 
 .philosophy .info-card {
@@ -365,38 +475,44 @@ nav li:first-child {
 .button-div {
     background-color: white;
     width: 100%;
-    height: 200px;
+    padding: 80px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.button-div>div {
-    padding: 10px 20px 10px 20px;
-    border-radius: 100px;
-    border: 2px solid rgb(182, 2, 182);
+.home-cta {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    text-align: center;
 }
 
-.button-div>div:hover {
-    opacity: 0.3;
+.home-cta-text {
+    color: var(--purple);
+    font-size: clamp(1.5rem, 4vw, 2.125rem);
+    font-weight: 600;
 }
 
-.button-div a {
+.home-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 42px;
+    background: linear-gradient(135deg, var(--gold), #e0c08a);
+    color: var(--purple);
+    font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+    font-weight: 700;
     text-decoration: none;
-    color: rgb(182, 2, 182);
-    font-style: normal;
-    font-size: 50px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(205, 168, 117, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.arrow {
-    padding-top: 4px;
-    padding-left: 30px;
-    color: rgb(182, 2, 182);
-}
-
-.arrow i {
-    font-size: 50px;
+.home-cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(205, 168, 117, 0.55);
 }
 
 .aesthetic-image2 {
@@ -424,22 +540,13 @@ nav li:first-child {
 }
 
 @media(width <=1120px) {
-    .title-text {
-        font-size: 60px;
-    }
-
-    .philosophy h1 {
-        font-size: 40px;
-    }
-
     .info-card li {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
 @media(width <=900px) {
     .title-text {
-        font-size: 40px;
         padding-left: 5vw;
         padding-right: 5vw;
     }
@@ -453,7 +560,6 @@ nav li:first-child {
 
 @media(width <=600px) {
     .title-text {
-        font-size: 30px;
         padding-left: 1vw;
         padding-right: 1vw;
     }
@@ -463,8 +569,8 @@ nav li:first-child {
     }
 
     .background-image>div {
-        padding: 110px 16px 48px;
-        gap: 40px;
+        padding: 100px 16px 44px;
+        gap: 36px;
     }
 
     #readMoreButton {
@@ -475,30 +581,28 @@ nav li:first-child {
         font-size: 20px;
     }
 
-    .mission div ul {
-        font-size: 15px;
-        padding-left: 10px;
+    .mission>div,
+    .philosophy div {
+        width: 90vw;
+        padding-top: 44px;
+        padding-bottom: 44px;
     }
 
-    .aesthetic-image {
-        width: 100%;
-        height: 400px;
+    .mission-grid {
+        grid-template-columns: 1fr;
     }
 
-    .philosophy h1 {
-        font-size: 30px;
+    .philosophy .info-card {
+        padding: 18px;
+    }
+
+    .aesthetic-image,
+    .aesthetic-image2 {
+        height: 300px;
     }
 
     .button-div {
-        height: 150px;
-    }
-
-    .button-div a {
-        font-size: 30px;
-    }
-
-    .arrow i {
-        font-size: 30px;
+        padding: 56px 20px;
     }
 }
 
@@ -541,7 +645,7 @@ nav li:first-child {
 }
 
 .page-hero h1 {
-    font-size: 62px;
+    font-size: clamp(2.25rem, 7vw, 62px);
     margin-bottom: 0;
     text-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
 }
@@ -619,7 +723,7 @@ nav li:first-child {
 
 .section-heading {
     color: var(--purple);
-    font-size: 40px;
+    font-size: clamp(1.75rem, 5vw, 40px);
     margin-bottom: 10px;
 }
 
@@ -765,11 +869,9 @@ nav li:first-child {
 
 @media (width <=600px) {
     .page-hero { padding: 120px 6vw 50px; }
-    .page-hero h1 { font-size: 38px; }
     .page-hero p { font-size: 17px; }
     .section { padding: 48px 0; }
     .section-inner { width: 90vw; }
-    .section-heading { font-size: 30px; }
     .section-sub { font-size: 16px; margin-bottom: 28px; }
     .lead { font-size: 20px; }
     .card-grid--2,
@@ -907,10 +1009,17 @@ nav li:first-child {
     display: flex;
     align-items: center;
     gap: 8px;
+    max-width: 100%;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
     transition: opacity 0.2s ease;
+}
+
+/* Let long email addresses wrap instead of overflowing narrow cards */
+.outreach p {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .outreach:hover {
